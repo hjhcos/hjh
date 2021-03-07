@@ -1,0 +1,52 @@
+- class_name: 友情链接
+  class_desc: 那些人，那些事
+  link_list:
+    - name: delehub
+      link: https://delehub.vercel.app/
+      avatar: https://avatars.githubusercontent.com/u/64998722?s=460&u=4f5a80a623ecb40984d3f3c2d8c528213d938c59&v=4
+      descr: BBU电子科技创新协会
+    - name: Cloudray
+      link: http://cloudray.club/
+      avatar: http://cloudray.club/img/avatar.png
+      descr: BBU电子科技创新协会
+    - name: 诸葛借剑
+      link: https://heathhou.vercel.app
+      avatar: https://heathhou.vercel.app/assets/favicon.png
+      descr: BBU电子科技创新协会
+
+- class_name: 网站
+  class_desc: 值得推荐的网站
+  link_list:
+    - name: Playground
+      link: https://jibencaozuo.com/
+      avatar: http://i0.hdslb.com/bfs/face/04b1218f8de8dc6fd74464531f199d919890b7ec.jpg@96w_96h_100Q_1c.webp
+      descr: AI人机交互可视化
+    - name: codepen
+      link: https://codepen.io/
+      avatar: https://cpwebassets.codepen.io/assets/social/facebook-default-05cf522ae1d4c215ae0f09d866d97413a2204b6c9339c6e7a1b96ab1d4a7340f.png
+      descr: CSS JS HTML 在线编辑平台
+    - name: repl
+      link: https://repl.it/
+      avatar: https://repl.it/public/images/sm.png
+      descr: 代码分享平台
+    - name: AIStudio
+      link: https://aistudio.baidu.com/aistudio/index
+      avatar: //ai-studio-static-online.cdn.bcebos.com/aistudio/dist/1614771573596/favicon-32.ico
+      descr: 百度AI平台
+    - name: 立创开源硬件
+      link: https://oshwhub.com/
+      avatar: https://docs.lceda.cn/img/pro.png
+      descr: 基于立创EDA的硬件设计
+    - name: 开源中国
+      link: https://www.oschina.net/
+      avatar: https://static.oschina.net/new-osc/img/favicon.ico
+      descr: 中国最大的代码讨论
+    - name: 程序员客栈
+      link: https://www.proginn.com/
+      avatar: https://stacdn.proginn.com/favicon_new.ico
+      descr: 接单平台
+    - name: Bigjpg
+      link: https://bigjpg.com/
+      avatar: https://bigjpg.com/htdocs/favicon.ico
+      descr: AI人工智能图片放大
+
