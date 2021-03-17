@@ -9,17 +9,6 @@ function format(date) {
     return (y + '-' + add0(m) + '-' + add0(d)).toString();
 }
 function realTimeGraph() {// 累计收益图
-    const divStyles = {
-        position: 'absolute',
-        background: 'rgba(255,255,255,0.95)',
-        boxShadow: 'rgb(174, 174, 174) 0px 0px 10px',
-        borderRadius: '4px',
-    };
-    const setStyles = (container, styles) => {
-        for (const key in styles) {
-            container.style[key] = styles[key];
-        }
-    };
     fetch('/static/data.json')
         .then((data) => data.json())
         .then((data) => {
@@ -49,43 +38,6 @@ function realTimeGraph() {// 累计收益图
                 },
             });
             line.render();
-            const createPie = (container, data) => {
-                const piePlot = new Pie(container, {
-                    data,
-                    width: 120,
-                    height: 120,
-                    appendPadding: 10,
-                    autoFit: false,
-                    angleField: 'value',
-                    colorField: 'type',
-                    legend: false,
-                    tooltip: false,
-                    animation: false,
-                    color: line.chart.themeObject.colors10,
-                    label: {
-                        type: 'inner',
-                        offset: '-10%',
-                        content: ({percent}) => `${(percent * 100).toFixed(0)}%`,
-                    },
-                });
-                piePlot.render();
-            };
-            line.update({
-                tooltip: {
-                    customContent: (value, items) => {
-                        const pieData = items.map((item) => ({
-                            type: item.name,
-                            value: Number(item.value),
-                        }));
-                        const container = document.createElement('div');
-                        const pieContainer = document.createElement('div');
-                        setStyles(container, divStyles);
-                        createPie(pieContainer, pieData);
-                        container.appendChild(pieContainer);
-                        return container;
-                    },
-                },
-            });
         });
 }
 function IOPVGraph() {// 单位净值走势图
