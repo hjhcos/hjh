@@ -26,7 +26,7 @@ function realTimeGraph() {// 累计收益图
                             return format(v)
                         }
                     }
-	},
+		},
                 seriesField: 'name',
                 interactions: [{type: 'brush'}],
                 tooltip: {
