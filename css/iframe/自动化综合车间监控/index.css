@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+/* 设置body */
+body {
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(/img/iframe/自动化综合车间/bg.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+/* 头部信息 */
+header {
+    position: relative;
+    height: 1rem;
+    background: url(/img/iframe/自动化综合车间/head_bg.png) no-repeat top center;
+    background-size: 100% 100%
+}
+
+h1 {
+    line-height: .875rem;
+    color: #fff;
+    font-size: .475rem;
+    text-align: center;
+}
+
+.ab-l {
+    position: absolute;
+    left: .45rem;
+}
+
+.showtime {
+    font-size: .25rem;
+    line-height: .75rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* 设置主体 */
+.mainbox {
+    padding: .25rem .5rem 0;
+    display: flex;
+}
+
+.col-3 {
+    flex: 3;
+}
+
+.col-5 {
+    flex: 5;
+}
+
+.col-3, .col-5 {
+    margin: 0 .125rem;
+}
+
+/* 面板 */
+.panel {
+    margin-bottom: .125rem;
+    padding: .25rem;
+    background: url(/img/iframe/自动化综合车间/panel.png) no-repeat top center;
+    background-size: 100% 100%;
+}
+
+.panel-body {
+    margin: 0;
+}
+
+/* 厂房人员监控 */
+#department{
+    width: 100%;
+    height: 1.625rem;
+}
+/* 产品质检数据 */
+#quality {
+    width: 100%;
+    height: 1.625rem;
+}
+/* 产品质检数据页脚info */
+#quality-footer {
+    width: 100%;
+    height: 1.625rem;
+}
+/* 库房库存量监控 */
+#stock {
+    width: 100%;
+    height: 3.45rem;
+}
+/* 厂房视频监控画面 */
+#video {
+    width: 100%;
+    height: 6.5rem;
+}
+/* 生产实时监控 */
+#produce {
+    width: 100%;
+    height: 2.45rem;
+}
+/* 厂房环境监控 */
+#workspace {
+    width: 100%;
+    height: 1.8rem;
+}
+#condition {
+    width: 100%;
+    height: 2.65rem;
+}
+/* 厂房设备监控头部info */
+#machines-head {
+    width: 100%;
+    height: 1.85rem;
+}
+/* 厂房设备监控 */
+#machines {
+    width: 100%;
+    height: 2.65rem;
+}

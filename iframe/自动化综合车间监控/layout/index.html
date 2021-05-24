@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自动化综合车间监控大屏</title>
+    <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="shortcut icon" href="https://gitee.com/hjhcos/hjhcos.gitlab.io/raw/master/source/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/iframe/自动化综合车间监控/index.css">
+</head>
+
+<body>
+    <!-- 网页头部 -->
+    <header>
+        <div class="ab-l">
+            <span class="showtime"></span>
+        </div>
+        <script>
+            // 动态加载时间
+            setInterval(function showTime(){
+                // var now = (new Date()).toLocaleString();
+                var now = new Date();
+                var year = now.getFullYear();
+                var month = now.getMonth()+1;
+                var day = now.getDay();
+                var hours = now.getHours();
+                var minutes = now.getMinutes();
+                var seconds = now.getSeconds();
+                $('.showtime').text(year+'/'+month+'/'+day+'\t'+hours+':'+minutes+':'+seconds);
+            }, 1000);
+        </script>
+        <h1>自动化综合车间监控</h1>
+    </header>
+    
+    <div class="mainbox">
+        <div class="col-3">
+            <!-- 厂房人员监控 -->
+            <div class="panel">
+                <div class="panel-body">
+                    <div id="department"></div>
+                </div>
+            </div>
+            <!-- 产品质检数据 -->
+            <div class="panel">
+                <div class="panel-body">
+                    <div id="quality"></div>
+                </div>
+                <div class="panel-footer">
+                    <div id="quality-footer"></div>
+                </div>
+            </div>
+            <!-- 库房库存量监控 -->
+            <div class="panel">
+                <div class="panel-body">
+                    <div id="stock"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-5">
+            <!-- 厂房视频监控画面 -->
+            <div class="panel">
+                <div class="panel-body">
+                    <div id="video"></div>
+                </div>
+            </div>
+            <!-- 生产实时监控 -->
+            <div class="panel">
+                <div class="panel-body">
+                    <div id="produce"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <!-- 厂房环境监控 -->
+            <div class="panel">
+                <!-- 厂房选择器 -->
+                <div class="panel-head">
+                    <div id="workspace"></div>
+                </div>
+                <!-- 选中厂房的环境情况 -->
+                <div class="panel-body">
+                    <div id="condition"></div>
+                </div>
+            </div>
+            <!-- 厂房设备监控 -->
+            <div class="panel">
+                <div class="panel-head">
+                    <!-- 机器选择器 -->
+                    <div id="machines-head"></div>
+                </div>
+                <div class="panel-body">
+                    <!-- 选中机器的详细情况 -->
+                    <div id="machines"></div>
+                </div>
+            </div>
+            <!-- 物料存储数据
+            <div class="panel">
+                <div class="panel-body">
+                    <div id="material"></div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <script src="/js/iframe/自动化综合车间监控/flexible.js"></script>
+</body>
+
+</html>
