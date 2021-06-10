@@ -1,3 +1,8 @@
+@font-face {
+	font-family: DS-DIGI;
+	src: url(/font/自动化综合车间监控/DS-DIGI-1.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +39,7 @@ h1 {
 }
 
 .showtime {
-    font-size: .25rem;
+    font-size: .2rem;
     line-height: .75rem;
     color: rgba(255, 255, 255, 0.7);
 }
@@ -56,6 +61,7 @@ h1 {
 
 .col-3, .col-5 {
     margin: 0 .125rem;
+    overflow: hidden;
 }
 
 /* 面板 */
@@ -66,9 +72,6 @@ h1 {
     background-size: 100% 100%;
 }
 
-.panel-body {
-    margin: 0;
-}
 
 /* 厂房人员监控 */
 #department{
@@ -91,7 +94,7 @@ h1 {
     height: 3.45rem;
 }
 /* 厂房视频监控画面 */
-#video {
+#workspace-mon {
     width: 100%;
     height: 6.5rem;
 }
@@ -101,21 +104,169 @@ h1 {
     height: 2.45rem;
 }
 /* 厂房环境监控 */
-#workspace {
+/* #workspace-env {
     width: 100%;
     height: 1.8rem;
-}
+} */
 #condition {
     width: 100%;
     height: 2.65rem;
 }
-/* 厂房设备监控头部info */
-#machines-head {
-    width: 100%;
-    height: 1.85rem;
-}
 /* 厂房设备监控 */
 #machines {
+    width: 100%; 
+    height: 2.65rem; 
+} 
+/* 物料存储数据 */
+#material {
     width: 100%;
-    height: 2.65rem;
+    height: 3.02rem;
 }
+
+
+/* 表格样式 */
+
+.panel-head, .panel-body, .panel-footer {
+    overflow: hidden;
+    position: relative;
+}
+
+.table {
+    margin: 0;
+}
+
+.thead {
+    margin: 0;
+}
+
+.tbody {
+    overflow: hidden;
+    height: 1.25rem;
+}
+
+.tr {
+    text-align: center;
+    display: flex;
+}
+
+.th, .td {
+    flex: 1;
+}
+
+.th {
+    font-size: .125rem;
+    padding: 2px;
+    border: 2px solid #000;
+    background-color: RGB(0,51,180);
+}
+
+.td {
+    font-size: .125rem;
+    padding: .125rem;
+}
+
+img{
+    height: 3.25rem;
+    width: 50%;
+    padding: .125rem;
+    overflow: hidden;
+}
+
+#env-select {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    height: .25rem;
+    font-size: .2rem;
+    color:rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#env-select option {
+    color:rgba(255, 255, 255, 0.6);
+    background-color: #000;
+    font-size: .2rem;
+}
+
+#envBox {
+    width: 100%;
+    position: absolute;
+    top: 30%;
+}
+
+#envBox div {
+    display: flex;
+    flex-direction: row;
+}
+
+.colEnv-0 div, .colEnv-1 div {
+    flex: 1;
+    margin: .125rem .03125rem;
+    padding: .1875rem;
+    font-size: .25rem;
+    font-family: DS-DIGI;
+    color: rgb(0, 250, 130);
+    background: url(/img/iframe/自动化综合车间/block.png) no-repeat top center;
+    background-size: 100% 100%;
+}
+
+.envBox-0-0:before {
+    content: '废气'
+}
+.envBox-0-0:after {
+    content: 't/a'
+}
+
+.envBox-0-1:before {
+    content: '废水'
+}
+.envBox-0-1:after {
+    content: 'm³';
+}
+
+.envBox-0-2:before {
+    content: '湿度'
+}
+.envBox-0-2:after {
+    content: '%RH'
+}
+
+.envBox-1-0:before {
+    content: '噪音'
+}
+.envBox-1-0:after {
+    content: 'dB(A)'
+}
+
+.envBox-1-1:before {
+    content: '粉尘'
+}
+.envBox-1-1:after {
+    content: 'mg/m³'
+}
+
+.envBox-1-2:before {
+    content: '温度'
+}
+.envBox-1-2:after {
+    content: '℃'
+}
+
+.envBox-0-0:before, .envBox-0-1:before, .envBox-0-2:before, .envBox-1-0:before, .envBox-1-1:before, .envBox-1-2:before {
+    padding-right: .03125rem;
+    margin-right: auto;
+    color: rgba(255, 255, 255);
+    font-size: .1875rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.envBox-0-0:after, .envBox-0-1:after, .envBox-0-2:after, .envBox-1-0:after, .envBox-1-1:after, .envBox-1-2:after {
+    padding-left: .03125rem;
+    margin-left: auto;
+    color: rgb(0, 130, 250);
+    font-size: .0625rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
