@@ -668,7 +668,8 @@ function WMQOptions(config) {
                         offset: 0, color: '#f7797d' // 100% 处的颜色
                     }],
                     global: false // 缺省为 false
-                }
+                },
+	width: config.rem / 32
             },
             areaStyle: {
                 color: {
