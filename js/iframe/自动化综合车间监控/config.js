@@ -541,7 +541,10 @@ function WCEOption(config) {
                 fontSize: config.rem / 6 * 1.5
             },
             left: config.title.left,
-            subtext: '环境各项指标'
+            subtext: '环境各项指标',
+            subtextStyle: {
+                fontSize: config.rem/6
+            }
         },
     }
 }
